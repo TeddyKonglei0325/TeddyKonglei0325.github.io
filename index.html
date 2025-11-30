@@ -144,8 +144,8 @@
 
    const questions2 = [
     {
-      question: "1. 中国的首都2是？",
-      options: ["上海12", "广州", "北京", "深圳"],
+      question: "1. What is the definition of 'rival causes'？",
+      options: ["a plausible alternative explanation that can explain why a certain outcome occurred", "广州", "北京", "深圳"],
       answer: "北京"
     },
     {
@@ -162,39 +162,33 @@
 
    const questions3 = [
     {
-      question: "1. 中国的首都3是？",
-      options: ["上海12", "广州", "北京", "深圳"],
-      answer: "北京"
+      question: "1. what is the definition of 'rival causes'？",
+      options: ["A reason why something happens.", "A plausible alternative explanation that can explain why a certain outcome occurred.", "One thing causes, leads to, influences, or is a factor in something"],
+      answer: "A plausible alternative explanation that can explain why a certain outcome occurred."
     },
     {
-      question: "2. HTML 的全称是？",
-      options: [
-        "Hyper Text Markup Language",
-        "High Tech Machine Language",
-        "Home Tool Markup Language",
-        "Hyperlinks and Text Markup Language"
-      ],
-      answer: "Hyper Text Markup Language"
-    } 
+      question: "2. What can be the rival cause of the effect in the sentence？Spending too much time on social media lets students not concentrate on their study.",
+      options: ["Close relationship with neighbours.", "Environmental pollution.", "Reduced face-to-face communication."]
+      answer: "Reduced face-to-face communication."
+    },
+    {
+      question: "3. What can be the rival cause of the effect in the sentence？Poor time management leads to low efficiency."
+      options: ["Last-minute cramming before exams.", "Everything done on time.", "High scores in the exams."]
+      answer: "Last-minute cramming before exams."
+    },
+    {
+      question: "4. What can be the rival cause of the effect in the sentence？Practicing a musical instrument daily can improve my performance skills."
+      options: ["Improved qualities of musical instruments.", "Building personality.", "Success in school conert."
+      answer: "Building personality."
+    },
+    {
+      question: "5. What can be the rival cause of the effect in the sentence？Respiratory disease increased because of air pollution from factories."
+      options: ["High rate of PM2.5.", "Good weather.", "Water pollution."
+      anser: "High rate of PM2.5."
+    },
   ];
 
-   const questions4 = [
-    {
-      question: "1. 中国的首都4是？",
-      options: ["上海12", "广州", "北京", "深圳"],
-      answer: "北京"
-    },
-    {
-      question: "2. HTML 的全称是？",
-      options: [
-        "Hyper Text Markup Language",
-        "High Tech Machine Language",
-        "Home Tool Markup Language",
-        "Hyperlinks and Text Markup Language"
-      ],
-      answer: "Hyper Text Markup Language"
-    } 
-  ];
+  
 
   function renderQuiz(containerName,questionJson) {
     const container = document.getElementById(containerName);
