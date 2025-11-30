@@ -196,22 +196,22 @@
         optionDiv.textContent = option;
 
         optionDiv.addEventListener('click', () => {
-          // 1. 清除当前题目的所有选项的 selected 样式
+       
           optionsContainer.querySelectorAll('.option').forEach(el => {
             el.classList.remove('selected');
           });
 
-          // 2. 标记当前选中项
+     
           optionDiv.classList.add('selected');
 
-          // 3. 移除该题目下已存在的反馈区域（关键修复！）
+         
           const existingFeedback = questionDiv.querySelector('.feedback');
           if (existingFeedback) existingFeedback.remove();
 
           const existingCorrect = questionDiv.querySelector('.correct-answer');
           if (existingCorrect) existingCorrect.remove();
 
-          // 4. 创建新的反馈
+          
           const isCorrect = option === q.answer;
 
           const feedbackDiv = document.createElement('div');
@@ -221,7 +221,7 @@
 
           const correctDiv = document.createElement('div');
           correctDiv.className = 'correct-answer';
-          correctDiv.innerHTML = `正确答案：<span>${q.answer}</span>`;
+          correctDiv.innerHTML = `correct answer:<span>${q.answer}</span>`;
           questionDiv.appendChild(correctDiv);
         });
 
