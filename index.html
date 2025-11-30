@@ -100,14 +100,16 @@
 </head>
 <body>
 
-<h1>选择题练习（点击选项立即查看答案）</h1>
 
 <div id="quiz-container"></div>
+<div id="quiz-container2"></div>
+<div id="quiz-container3"></div>
+<div id="quiz-container4"></div>
 
 <script>
-  const questions = [
+  const questions1 = [
     {
-      question: "1. 中国的首都是？",
+      question: "1. 中国的首都1是？",
       options: ["上海12", "广州", "北京", "深圳"],
       answer: "北京"
     },
@@ -120,19 +122,68 @@
         "Hyperlinks and Text Markup Language"
       ],
       answer: "Hyper Text Markup Language"
-    },
-    {
-      question: "3. 下列哪个不是编程语言？",
-      options: ["Python", "Java", "MySQL", "JavaScript"],
-      answer: "MySQL"
-    }
+    } 
   ];
 
-  function renderQuiz() {
-    const container = document.getElementById('quiz-container');
+   const questions2 = [
+    {
+      question: "1. 中国的首都2是？",
+      options: ["上海12", "广州", "北京", "深圳"],
+      answer: "北京"
+    },
+    {
+      question: "2. HTML 的全称是？",
+      options: [
+        "Hyper Text Markup Language",
+        "High Tech Machine Language",
+        "Home Tool Markup Language",
+        "Hyperlinks and Text Markup Language"
+      ],
+      answer: "Hyper Text Markup Language"
+    } 
+  ];
+
+   const questions3 = [
+    {
+      question: "1. 中国的首都3是？",
+      options: ["上海12", "广州", "北京", "深圳"],
+      answer: "北京"
+    },
+    {
+      question: "2. HTML 的全称是？",
+      options: [
+        "Hyper Text Markup Language",
+        "High Tech Machine Language",
+        "Home Tool Markup Language",
+        "Hyperlinks and Text Markup Language"
+      ],
+      answer: "Hyper Text Markup Language"
+    } 
+  ];
+
+   const questions4 = [
+    {
+      question: "1. 中国的首都4是？",
+      options: ["上海12", "广州", "北京", "深圳"],
+      answer: "北京"
+    },
+    {
+      question: "2. HTML 的全称是？",
+      options: [
+        "Hyper Text Markup Language",
+        "High Tech Machine Language",
+        "Home Tool Markup Language",
+        "Hyperlinks and Text Markup Language"
+      ],
+      answer: "Hyper Text Markup Language"
+    } 
+  ];
+
+  function renderQuiz(containerName,questionJson) {
+    const container = document.getElementById(containerName);
     container.innerHTML = '';
 
-    questions.forEach(q => {
+    questionJson.forEach(q => {
       const questionDiv = document.createElement('div');
       questionDiv.className = 'question';
 
@@ -185,7 +236,10 @@
     });
   }
 
-  renderQuiz();
+  renderQuiz('quiz-container',questions1);
+   renderQuiz('quiz-container2',questions2);
+   renderQuiz('quiz-container3',questions3);
+   renderQuiz('quiz-container4',questions4);
 </script>
 
 </body>
